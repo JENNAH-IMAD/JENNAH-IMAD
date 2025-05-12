@@ -30,7 +30,7 @@
   </a>
   &nbsp;
   <a href="https://jennah-imad.github.io/Portfolio/" target="_blank">
-    <img src="https://img.shields.io/badge/Portfolio-%230077B5.svg?style=for-the-badge&logo=firefox&logoColor=white" />
+    <img img src="https://skillicons.dev/icons?i=htmx" width="40" />
   </a>
 </p>
 
