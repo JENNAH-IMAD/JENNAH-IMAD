@@ -3,7 +3,9 @@
   <img src="https://github.com/JENNAH-IMAD/JENNAH-IMAD/blob/main/RCR-ezgif.com-crop.gif" width="100%" alt="cover-gif" />
 </p>
 
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=#B1B1B1FF&center=true&vCenter=true&width=900&lines=Hi+there%2C+I'm+Imad+Jennah+%F0%9F%91%8B;Full+Stack+Developer+%7C+Clean+Code+Lover;Always+Building+%7C+Always+Learning)](https://git.io/typing-svg)
+<!-- Animated Typing -->
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=B1B1B1&center=true&vCenter=true&width=900&lines=Hi+there%2C+I'm+Imad+Jennah+%F0%9F%91%8B;Full+Stack+Developer+%7C+Clean+Code+Lover;Always+Building+%7C+Always+Learning)](https://git.io/typing-svg)
+
 
 ---
 
