@@ -1,22 +1,37 @@
-<!-- Typing animation -->
-[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=500&size=25&duration=4000&pause=1000&color=00BFFF&center=true&vCenter=true&width=800&lines=Hi+there%2C+I'm+Imad+Jennah+%F0%9F%91%8B;Software+Engineer+%7C+Full+Stack+Developer;Lover+of+Clean+Code+%26+Smart+Designs;Always+building+%7C+Always+learning)](https://git.io/typing-svg)
+<!-- Animated Typing + GIF -->
+<p align="center">
+  <img src="https://github.com/JENNAH-IMAD/JENNAH-IMAD/blob/main/RCR-ezgif.com-crop.gif" width="100%" alt="cover-gif" />
+</p>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=24&pause=1000&color=00BFFF&center=true&vCenter=true&width=900&lines=Hi+there%2C+I'm+Imad+Jennah+%F0%9F%91%8B;Full+Stack+Developer+%7C+Clean+Code+Lover;Always+Building+%7C+Always+Learning)](https://git.io/typing-svg)
 
 ---
 
-# 💫 About Me
+<h1 align="center" style="color:#00BFFF;">Lover of Clean Code & Smart Designs 💙</h1>
+
+---
+
+## 💫 About Me
 
 🎓 **Engineer in Computer Science and Networks (MIAGE)**  
 💼 Full-Stack Developer | Java Spring Boot & React  
-🛠️ Passionate about crafting clean, efficient, and scalable applications  
-🌱 Currently improving my portfolio and deepening my expertise in modern web stacks  
-🌍 Eager to join **international teams**, contribute to real-world projects, and innovate through code
+🧠 Passionate about clean code, modern tools, and scalable architectures  
+🚀 Constantly learning and tackling challenges through real-world projects  
+🌍 Open to international opportunities and collaboration
 
 ---
 
 ## 🌐 Connect with Me
 
-[![LinkedIn](https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/imad-jennah/)  
-[![Gmail](https://img.shields.io/badge/-Email-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:imad.jennah.pro@gmail.com)
+<p align="left">
+  <a href="https://www.linkedin.com/in/imad-jennah/" target="_blank">
+    <img src="https://skillicons.dev/icons?i=linkedin" width="40" />
+  </a>
+  &nbsp;
+  <a href="mailto:imad.jennah.pro@gmail.com" target="_blank">
+    <img src="https://skillicons.dev/icons?i=gmail" width="40" />
+  </a>
+</p>
 
 ---
 
@@ -24,22 +39,22 @@
 
 ### 🚀 Frontend
 <p>
-  <img src="https://skillicons.dev/icons?i=react,html,css,js,ts,tailwind,bootstrap" alt="Frontend" />
+  <img src="https://skillicons.dev/icons?i=react,html,css,js,ts,tailwind,bootstrap" />
 </p>
 
 ### 🔧 Backend
 <p>
-  <img src="https://skillicons.dev/icons?i=spring,java,nodejs,express,django,flask" alt="Backend" />
+  <img src="https://skillicons.dev/icons?i=spring,java,nodejs,express,django,flask" />
 </p>
 
 ### 🛢️ Databases
 <p>
-  <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,firebase" alt="Databases" />
+  <img src="https://skillicons.dev/icons?i=mysql,postgres,mongodb,firebase" />
 </p>
 
 ### ⚙️ Tools & DevOps
 <p>
-  <img src="https://skillicons.dev/icons?i=git,github,postman,docker,vscode,figma,linux" alt="Tools" />
+  <img src="https://skillicons.dev/icons?i=git,github,postman,docker,vscode,figma,linux" />
 </p>
 
 ---
@@ -49,6 +64,14 @@
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=JENNAH-IMAD&show_icons=true&theme=github_dark&hide_border=true&custom_title=My%20GitHub%20Stats)  
 ![GitHub Streak](https://streak-stats.demolab.com?user=JENNAH-IMAD&theme=github-dark&hide_border=true)  
 ![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=JENNAH-IMAD&layout=compact&theme=github_dark&hide_border=true)
+
+---
+
+## 🐍 GitHub Activity Snake
+
+<p align="center">
+  <img src="https://github.com/JENNAH-IMAD/JENNAH-IMAD/blob/output/github-snake.svg" alt="GitHub Snake" />
+</p>
 
 ---
 
@@ -70,12 +93,11 @@
 
 ---
 
-<!-- Animated waving hand GIF -->
+<!-- Footer -->
 <p align="center">
   <img src="https://raw.githubusercontent.com/ABSphreak/ABSphreak/master/gifs/Hi.gif" width="40px" />
 </p>
 
-<!-- Footer -->
 <p align="center">
   <sub><i>Proudly crafted by Imad Jennah — let's build something amazing together.</i></sub>
 </p>
