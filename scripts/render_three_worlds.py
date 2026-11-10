@@ -167,7 +167,7 @@ def hero():
 <text class="r" {d(.3)} x="44" y="290" font-family="{SERIF}" font-style="italic" font-size="116" letter-spacing="-2.5" fill="{INK}">Jennah</text>
 <g class="r" {d(.55)}>{text_lines(48,338,["I build full stack applications", "and automate software delivery."],27,f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}</g>
 <text class="f" {d(.8)} x="48" y="396" font-family="{MONO}" font-size="13" fill="{TECH}">im-fix.vercel.app &#8599;</text>
-<g class="r" {d(.4)} transform="translate(570 110)">
+<g class="f" {d(.4)} transform="translate(570 110)">
 <circle cx="112" cy="112" r="110" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
 <g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>
 """
