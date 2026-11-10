@@ -119,7 +119,7 @@ def render_hero() -> None:
 <g transform="translate(650 34) scale(1.35)" font-family="monospace" font-size="3.4" fill="#17202b" aria-label="Imad Jennah binary portrait">
 {portrait}
 </g>'''
-    write("hero.svg", 1000, 360, body, "Imad Jennah, Full Stack Engineer, with animated binary portrait from ImFix portfolio")
+    write("hero-portrait.svg", 1000, 360, body, "Imad Jennah, Full Stack Engineer, with animated binary portrait from ImFix portfolio")
 
 
 def render_tiles() -> None:
