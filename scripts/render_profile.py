@@ -85,9 +85,9 @@ def rect(x: float, y: float, w: float, h: float, fill: str, radius: int = 3, ext
 def render_hero() -> None:
     from io import BytesIO
     from PIL import Image
-    response = requests.get("https://raw.githubusercontent.com/JENNAH-IMAD/ImFix/main/src/assets/photo.jpg", timeout=30)
-    response.raise_for_status()
-    photo = Image.open(BytesIO(response.content)).convert("RGB")
+    import base64
+    portrait_bytes = base64.b64decode((ROOT / "data" / "portrait.b64").read_text())
+    photo = Image.open(BytesIO(portrait_bytes)).convert("RGB")
     scale = max(250 / photo.width, 210 / photo.height)
     crop_w, crop_h = 250 / scale, 210 / scale
     left, top = (photo.width - crop_w) / 2, (photo.height - crop_h) * .3
