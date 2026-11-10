@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewBox="0 0 1000 200" role="img" aria-label="Let&#x27;s build something together"><title>Let&#x27;s build something together</title><style>
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.rise{opacity:0;animation:rise .75s cubic-bezier(.2,.7,.2,1) both}.fade{opacity:0;animation:fade .8s ease-out both}
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .75s cubic-bezier(.2,.7,.2,1) both}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.rise,.fade,.bar,.pulse{animation:none!important;opacity:1!important;transform:none!important}}
+</style><rect width="1000" height="200" rx="16" fill="#f3f3f1"/><text class="rise" x="40" y="51" font-family="Georgia,serif" font-size="32" fill="#111111">Let's build something together</text><text x="42" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Open to Full Stack and DevOps opportunities.</text><text x="42" y="129" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Casablanca, Morocco / Remote and international roles</text></svg>

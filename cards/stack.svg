@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="200" viewBox="0 0 1000 200" role="img" aria-label="My toolkit"><title>My toolkit</title><style>
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.rise{opacity:0;animation:rise .75s cubic-bezier(.2,.7,.2,1) both}.fade{opacity:0;animation:fade .8s ease-out both}
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .75s cubic-bezier(.2,.7,.2,1) both}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.rise,.fade,.bar,.pulse{animation:none!important;opacity:1!important;transform:none!important}}
+</style><rect width="1000" height="200" rx="16" fill="#f3f3f1"/><text class="rise" x="40" y="51" font-family="Georgia,serif" font-size="32" fill="#111111">My toolkit</text><text x="42" y="100" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Frontend: React / Next.js / TypeScript / Tailwind</text><text x="42" y="129" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Backend: Spring Boot / .NET / Node.js / Python</text><text x="42" y="158" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Delivery and data: Docker / GitHub Actions / Linux / PostgreSQL</text></svg>

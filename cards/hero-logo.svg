@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="300" viewBox="0 0 1000 300" role="img" aria-label="Imad Jennah, Full Stack Engineer. im-fix.vercel.app"><title>Imad Jennah, Full Stack Engineer. im-fix.vercel.app</title><style>
+@keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
+@keyframes fade{from{opacity:0}to{opacity:1}}
+@keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
+@keyframes pulse{0%,100%{opacity:.4}50%{opacity:1}}
+.rise{opacity:0;animation:rise .75s cubic-bezier(.2,.7,.2,1) both}.fade{opacity:0;animation:fade .8s ease-out both}
+.bar{transform-box:fill-box;transform-origin:bottom;transform:scaleY(0);animation:grow .75s cubic-bezier(.2,.7,.2,1) both}
+.pulse{animation:pulse 2.4s ease-in-out infinite}
+@media(prefers-reduced-motion:reduce){.rise,.fade,.bar,.pulse{animation:none!important;opacity:1!important;transform:none!important}}
+</style><rect width="1000" height="300" rx="18" fill="#f7f4ed"/>
+<text class="fade" x="42" y="56" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="12" letter-spacing="1.5" fill="#2369b3">FULL STACK ENGINEER / CASABLANCA, MOROCCO</text>
+<text class="rise" x="40" y="137" font-family="Georgia,serif" font-size="66" fill="#111111">Imad Jennah</text>
+<text x="44" y="183" font-family="system-ui,-apple-system,sans-serif" font-size="18" fill="#4e5865">Clean interfaces. Reliable APIs. Automated delivery.</text>
+<text x="44" y="236" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="14" fill="#2369b3">im-fix.vercel.app &#8599;</text>
+<g transform="translate(770 70)"><circle cx="70" cy="70" r="69" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
+<g transform="translate(21 20)" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g></svg>
