@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="./cards/hero.svg" width="100%" alt="Imad Jennah - Full Stack Engineer in Casablanca, Morocco" />
+<img src="./cards/hero-portrait.svg" width="100%" alt="Imad Jennah - Full Stack Engineer in Casablanca, Morocco" />
 
 <img src="./cards/heatmap.svg" width="100%" alt="GitHub contributions, animated and refreshed daily" />
 
@@ -26,7 +26,7 @@ I'm **Imad Jennah**, a computer engineering student (MIAGE) at EMSI in Casablanc
 
 | Frontend | Backend | DevOps & cloud | Data & tools |
 |:--|:--|:--|:--|
-| React � Angular � Next.js � TypeScript � Tailwind | Spring Boot � Java � .NET � Node.js � Python | Docker � GitHub Actions � Linux � Nginx � GCP � Terraform � Kubernetes | PostgreSQL � MySQL � MongoDB � Redis � SQL Server � Git � Figma |
+| React  /  Angular  /  Next.js  /  TypeScript  /  Tailwind | Spring Boot  /  Java  /  .NET  /  Node.js  /  Python | Docker  /  GitHub Actions  /  Linux  /  Nginx  /  GCP  /  Terraform  /  Kubernetes | PostgreSQL  /  MySQL  /  MongoDB  /  Redis  /  SQL Server  /  Git  /  Figma |
 
 ## Selected projects
 
@@ -40,14 +40,14 @@ I'm **Imad Jennah**, a computer engineering student (MIAGE) at EMSI in Casablanc
 
 ## Certifications
 
-Advanced React (Meta) � Java Full Stack (Board Infinity) � Spring Microservices (Google Cloud) � DevOps Foundations (IBM) � UML Modeling (Udemy)
+Advanced React (Meta)  /  Java Full Stack (Board Infinity)  /  Spring Microservices (Google Cloud)  /  DevOps Foundations (IBM)  /  UML Modeling (Udemy)
 
 <div align="center">
 
 <br />
 
-**Open to Full Stack and DevOps opportunities** � Full-time � Internship � Freelance � Open Source  
-Casablanca, Morocco � Open to remote and international roles
+**Open to Full Stack and DevOps opportunities**  /  Full-time  /  Internship  /  Freelance  /  Open Source  
+Casablanca, Morocco  /  Open to remote and international roles
 
 <br />
 
