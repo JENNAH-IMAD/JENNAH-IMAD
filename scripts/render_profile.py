@@ -83,43 +83,32 @@ def rect(x: float, y: float, w: float, h: float, fill: str, radius: int = 3, ext
 
 
 def render_hero() -> None:
-    from io import BytesIO
-    from PIL import Image
-    import base64
-    portrait_bytes = base64.b64decode((ROOT / "data" / "portrait.b64").read_text())
-    photo = Image.open(BytesIO(portrait_bytes)).convert("RGB")
-    scale = max(250 / photo.width, 210 / photo.height)
-    crop_w, crop_h = 250 / scale, 210 / scale
-    left, top = (photo.width - crop_w) / 2, (photo.height - crop_h) * .3
-    sample = photo.crop((left, top, left + crop_w, top + crop_h)).resize((96, 64), Image.Resampling.LANCZOS)
-    groups = [[] for _ in range(16)]
-    for row in range(64):
-        for column in range(96):
-            red, green, blue = sample.getpixel((column, row))
-            light = (red * .2126 + green * .7152 + blue * .0722) / 255
-            if light < .08:
-                continue
-            digit = "1" if (column * 13 + row * 7) % 5 < 2 else "0"
-            groups[(column * 7 + row * 3) % 16].append(
-                f'<text x="{column*250/96:.2f}" y="{(row+1)*210/64:.2f}" opacity="{light**1.35:.3f}">{digit}</text>')
-    portrait = "".join(f'<g class="binary" style="animation-delay:{-i*.37:.2f}s">{"".join(group)}</g>' for i, group in enumerate(groups))
-    body = f'''<style>
-@keyframes binarymotion{{0%,100%{{transform:translate(0,0);opacity:.85}}50%{{transform:translate(.4px,-.5px);opacity:1}}}}
-.binary{{animation:binarymotion 3s ease-in-out infinite}}
-@media(prefers-reduced-motion:reduce){{.binary{{animation:none!important}}}}
-</style>
-<rect width="1000" height="360" rx="18" fill="#f7f4ed" stroke="{RULE}"/>
-<path d="M42 38h44" stroke="{BLUE}" stroke-width="4" stroke-linecap="round"/>
-<text class="fade" x="42" y="76" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{BLUE}">FULL STACK ENGINEER / CASABLANCA, MOROCCO</text>
-<text class="rise" x="40" y="161" style="animation-delay:.15s" font-family="{SERIF}" font-size="66" fill="{INK}">Imad Jennah</text>
-<g class="rise" style="animation-delay:.3s" font-family="{SANS}" font-size="18" fill="#4e5865">
-<text x="44" y="213">Building production-ready software,</text>
-<text x="44" y="242">from thoughtful interfaces to automated delivery.</text></g>
-<text class="fade" x="44" y="307" style="animation-delay:.5s" font-family="{MONO}" font-size="12" fill="{BLUE}">REACT / SPRING BOOT / .NET / DOCKER / CI/CD</text>
-<g transform="translate(650 34) scale(1.35)" font-family="monospace" font-size="3.4" fill="#17202b" aria-label="Imad Jennah binary portrait">
-{portrait}
-</g>'''
-    write("hero-portrait.svg", 1000, 360, body, "Imad Jennah, Full Stack Engineer, with animated binary portrait from ImFix portfolio")
+    body = f'''<rect width="1000" height="300" rx="18" fill="#f7f4ed"/>
+<text class="fade" x="42" y="56" font-family="{MONO}" font-size="12" letter-spacing="1.5" fill="{BLUE}">FULL STACK ENGINEER / CASABLANCA, MOROCCO</text>
+<text class="rise" x="40" y="137" font-family="{SERIF}" font-size="66" fill="{INK}">Imad Jennah</text>
+<text x="44" y="183" font-family="{SANS}" font-size="18" fill="#4e5865">Clean interfaces. Reliable APIs. Automated delivery.</text>
+<text x="44" y="236" font-family="{MONO}" font-size="14" fill="{BLUE}">im-fix.vercel.app &#8599;</text>
+<g transform="translate(770 70)"><circle cx="70" cy="70" r="69" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
+<g transform="translate(21 20)" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>'''
+    write("hero-logo.svg", 1000, 300, body, "Imad Jennah, Full Stack Engineer. im-fix.vercel.app")
+    panels = [
+        ("about.svg", "A little about me", [
+            "Computer engineering (MIAGE) at EMSI, Casablanca.",
+            "I build full stack applications and automate software delivery.",
+            "Explore my work: im-fix.vercel.app"]),
+        ("stack.svg", "My toolkit", [
+            "Frontend: React / Next.js / TypeScript / Tailwind",
+            "Backend: Spring Boot / .NET / Node.js / Python",
+            "Delivery and data: Docker / GitHub Actions / Linux / PostgreSQL"]),
+        ("contact.svg", "Let's build something together", [
+            "Open to Full Stack and DevOps opportunities.",
+            "Casablanca, Morocco / Remote and international roles"])
+    ]
+    for name, title, lines in panels:
+        text = "".join(f'<text x="42" y="{100+i*29}" font-family="{SANS}" font-size="18" fill="#4e5865">{html.escape(line)}</text>' for i,line in enumerate(lines))
+        write(name, 1000, 200, f'<rect width="1000" height="200" rx="16" fill="{PAPER}"/><text class="rise" x="40" y="51" font-family="{SERIF}" font-size="32" fill="{INK}">{title}</text>'+text, title)
+    for name,label in [("link-portfolio","View portfolio"),("link-linkedin","LinkedIn"),("link-email","Get in touch")]:
+        write(name+".svg", 332, 64, f'<rect x="4" y="4" width="324" height="56" rx="12" fill="{PAPER}"/><text x="24" y="40" font-family="{SANS}" font-size="18" fill="{BLUE}">{label}</text><text x="286" y="40" font-size="20" fill="{BLUE}">&#8599;</text>', label)
 
 
 def render_tiles() -> None:
@@ -133,7 +122,7 @@ def render_tiles() -> None:
 <text class="fade" x="24" y="36" font-family="{MONO}" font-size="12" letter-spacing="1.5" fill="{foreground}">{kicker}</text>
 <text class="rise" x="22" y="94" style="animation-delay:{i*.15:.2f}s" font-family="{SERIF}" font-size="29" fill="{foreground}">{title}</text>
 <text class="fade" x="24" y="130" style="animation-delay:{i*.15+.2:.2f}s" font-family="{SANS}" font-size="13" fill="{foreground}">{subtitle}</text>
-<text class="fade" x="287" y="38" font-family="{MONO}" font-size="16" fill="{foreground}">?</text>'''
+<text class="fade" x="287" y="38" font-family="{MONO}" font-size="16" fill="{foreground}">&#8599;</text>'''
         write(f"{file}.svg", 332, 182, body, f"{kicker}: {title}. {subtitle}")
 
 
@@ -198,7 +187,7 @@ def render_projects() -> None:
 <text class="rise" x="36" y="43" style="animation-delay:{i*.1:.2f}s" font-family="{SERIF}" font-size="23" fill="{INK}">{html.escape(title)}</text>
 <text x="22" y="79" font-family="{MONO}" font-size="11" fill="{BLUE}">{html.escape(stack)}</text>
 <text x="22" y="112" font-family="{SANS}" font-size="13" fill="{MUTED}">{html.escape(detail)}</text>
-<text x="446" y="126" font-family="{MONO}" font-size="13" fill="{BLUE}">?</text>'''
+<text x="446" y="126" font-family="{MONO}" font-size="13" fill="{BLUE}">&#8599;</text>'''
         write(f"project-{slug}.svg", 480, 154, body, f"{title}. {stack}. {detail}")
 
 
