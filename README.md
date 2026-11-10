@@ -9,5 +9,5 @@
 </div>
 
 <p align="center">
-<a href="https://im-fix.vercel.app/">im-fix.vercel.app</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/imad-jennah/">LinkedIn</a> &nbsp;/&nbsp; <a href="mailto:imad.jennah.pro@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://github.com/JENNAH-IMAD?tab=repositories">Repositories</a>
+<a href="https://im-fix.vercel.app/"><img src="./cards/connect-portfolio.svg" width="24%" alt="Portfolio" /></a><a href="https://www.linkedin.com/in/imad-jennah/"><img src="./cards/connect-linkedin.svg" width="24%" alt="LinkedIn" /></a><a href="mailto:imad.jennah.pro@gmail.com"><img src="./cards/connect-email.svg" width="24%" alt="Email" /></a><a href="https://github.com/JENNAH-IMAD?tab=repositories"><img src="./cards/connect-repos.svg" width="24%" alt="Repositories" /></a>
 </p>
