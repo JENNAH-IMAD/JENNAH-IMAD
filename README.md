@@ -1,11 +1,13 @@
+<!-- Three Worlds design adapted from AVIVASHISHTA29/AVIVASHISHTA29. SVGs regenerated daily. -->
 <div align="center">
-<a href="https://im-fix.vercel.app/"><img src="./cards/hero-logo.svg" width="100%" alt="Imad Jennah — Full Stack Engineer. View my portfolio" /></a><br />
-<a href="https://im-fix.vercel.app/"><img src="./cards/link-portfolio.svg" width="33.333%" alt="View portfolio" /></a><a href="https://www.linkedin.com/in/imad-jennah/"><img src="./cards/link-linkedin.svg" width="33.333%" alt="LinkedIn" /></a><a href="mailto:imad.jennah.pro@gmail.com"><img src="./cards/link-email.svg" width="33.333%" alt="Get in touch" /></a><br />
-<a href="https://im-fix.vercel.app/"><img src="./cards/about.svg" width="100%" alt="Computer engineering at EMSI, Casablanca. Full stack applications and automated delivery. Portfolio: https://im-fix.vercel.app/" /></a><br />
-<img src="./cards/stack.svg" width="100%" alt="React, Next.js, TypeScript, Spring Boot, .NET, Docker, GitHub Actions and PostgreSQL" /><br />
-<img src="./cards/heatmap.svg" width="100%" alt="Daily GitHub contributions" /><br />
-<img src="./cards/activity.svg" width="100%" alt="Monthly contributions and streak" /><br />
-<a href="https://im-fix.vercel.app/"><img src="./cards/project-meeting-room.svg" width="49%" alt="Meeting Room Booking System" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/project-cicd.svg" width="49%" alt="React CI/CD Pipeline" /></a><br />
-<a href="https://im-fix.vercel.app/"><img src="./cards/project-linux-monitoring.svg" width="49%" alt="Linux Web Server and Monitoring" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/project-equipment-manager.svg" width="49%" alt="IT Equipment Request Manager" /></a><br />
-<a href="mailto:imad.jennah.pro@gmail.com"><img src="./cards/contact.svg" width="100%" alt="Open to Full Stack and DevOps opportunities. Casablanca, remote and international roles." /></a>
+<a href="https://im-fix.vercel.app/"><img src="./cards/hero-design.svg" width="100%" alt="Imad Jennah. Full Stack Engineer in Casablanca. I build full stack applications and automate software delivery." /></a><br>
+<img src="./cards/heatmap.svg?v=three-worlds" width="100%" alt="My contribution graph in blue, refreshed daily" /><br>
+<img src="./cards/activity.svg?v=three-worlds" width="100%" alt="Monthly contributions, streak, active days and busiest day" /><br>
+<a href="https://im-fix.vercel.app/"><img src="./cards/build.svg?v=three-worlds" width="33.333%" alt="BUILD: 4 featured projects" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/brand.svg" width="33.333%" alt="AUTOMATE: Docker, CI/CD and Linux" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/learn.svg" width="33.333%" alt="EXPLORE: cloud and AI" /></a><br>
+<picture><source media="(prefers-color-scheme: dark)" srcset="./cards/title-coding-dark.svg" /><img src="./cards/title-coding-light.svg" width="100%" alt="What I'm building" /></picture><br>
+<a href="https://im-fix.vercel.app/"><img src="./cards/repo-room-booking.svg" width="33.333%" alt="Meeting room booking system" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/repo-cicd-pipeline.svg" width="33.333%" alt="React CI/CD pipeline" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/repo-equipment-manager.svg" width="33.333%" alt="IT equipment request manager" /></a>
 </div>
+
+<p align="center">
+<a href="https://im-fix.vercel.app/">im-fix.vercel.app</a> &nbsp;/&nbsp; <a href="https://www.linkedin.com/in/imad-jennah/">LinkedIn</a> &nbsp;/&nbsp; <a href="mailto:imad.jennah.pro@gmail.com">Email</a> &nbsp;/&nbsp; <a href="https://github.com/JENNAH-IMAD?tab=repositories">Repositories</a>
+</p>
