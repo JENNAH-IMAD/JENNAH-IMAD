@@ -23,7 +23,9 @@ jobs:
       - name: Fetch contributions and render cards
         env:
           GH_PROFILE_USER: JENNAH-IMAD
-        run: python scripts/render_profile.py
+        run: |
+          python scripts/render_profile.py
+          python scripts/render_three_worlds.py
       - name: Commit refreshed cards
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
