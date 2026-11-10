@@ -83,20 +83,49 @@ def rect(x: float, y: float, w: float, h: float, fill: str, radius: int = 3, ext
 
 
 def render_hero() -> None:
-    body = f'''<rect width="1000" height="250" rx="18" fill="#f7f4ed" stroke="{RULE}"/>
+    from io import BytesIO
+    from PIL import Image
+    response = requests.get("https://raw.githubusercontent.com/JENNAH-IMAD/ImFix/main/src/assets/photo.jpg", timeout=30)
+    response.raise_for_status()
+    photo = Image.open(BytesIO(response.content)).convert("RGB")
+    scale = max(250 / photo.width, 210 / photo.height)
+    crop_w, crop_h = 250 / scale, 210 / scale
+    left, top = (photo.width - crop_w) / 2, (photo.height - crop_h) * .3
+    sample = photo.crop((left, top, left + crop_w, top + crop_h)).resize((96, 64), Image.Resampling.LANCZOS)
+    groups = [[] for _ in range(16)]
+    for row in range(64):
+        for column in range(96):
+            red, green, blue = sample.getpixel((column, row))
+            light = (red * .2126 + green * .7152 + blue * .0722) / 255
+            if light < .08:
+                continue
+            digit = "1" if (column * 13 + row * 7) % 5 < 2 else "0"
+            groups[(column * 7 + row * 3) % 16].append(
+                f'<text x="{column*250/96:.2f}" y="{(row+1)*210/64:.2f}" opacity="{light**1.35:.3f}">{digit}</text>')
+    portrait = "".join(f'<g class="binary" style="animation-delay:{-i*.37:.2f}s">{"".join(group)}</g>' for i, group in enumerate(groups))
+    body = f'''<style>
+@keyframes binarymotion{{0%,100%{{transform:translate(0,0);opacity:.85}}50%{{transform:translate(.4px,-.5px);opacity:1}}}}
+.binary{{animation:binarymotion 3s ease-in-out infinite}}
+@media(prefers-reduced-motion:reduce){{.binary{{animation:none!important}}}}
+</style>
+<rect width="1000" height="360" rx="18" fill="#f7f4ed" stroke="{RULE}"/>
 <path d="M42 38h44" stroke="{BLUE}" stroke-width="4" stroke-linecap="round"/>
-<text class="fade" x="42" y="72" font-family="{MONO}" font-size="14" letter-spacing="2" fill="{BLUE}">FULL STACK ENGINEER � CASABLANCA, MOROCCO</text>
-<text class="rise" x="40" y="153" style="animation-delay:.15s" font-family="{SERIF}" font-size="68" fill="{INK}">Imad Jennah</text>
-<text class="rise" x="44" y="192" style="animation-delay:.3s" font-family="{SANS}" font-size="18" fill="#4e5865">Building production-ready software, from thoughtful interfaces to automated delivery.</text>
-<text class="fade" x="44" y="226" style="animation-delay:.5s" font-family="{MONO}" font-size="13" fill="{BLUE}">REACT  /  SPRING BOOT  /  .NET  /  DOCKER  /  CI/CD</text>
-<circle class="pulse" cx="930" cy="63" r="6" fill="{BLUE}"/><text x="868" y="176" font-family="{SERIF}" font-size="56" fill="{BLUE}" opacity=".82">IJ</text>'''
-    write("hero.svg", 1000, 250, body, "Imad Jennah, Full Stack Engineer in Casablanca, Morocco")
+<text class="fade" x="42" y="76" font-family="{MONO}" font-size="12" letter-spacing="1" fill="{BLUE}">FULL STACK ENGINEER / CASABLANCA, MOROCCO</text>
+<text class="rise" x="40" y="161" style="animation-delay:.15s" font-family="{SERIF}" font-size="66" fill="{INK}">Imad Jennah</text>
+<g class="rise" style="animation-delay:.3s" font-family="{SANS}" font-size="18" fill="#4e5865">
+<text x="44" y="213">Building production-ready software,</text>
+<text x="44" y="242">from thoughtful interfaces to automated delivery.</text></g>
+<text class="fade" x="44" y="307" style="animation-delay:.5s" font-family="{MONO}" font-size="12" fill="{BLUE}">REACT / SPRING BOOT / .NET / DOCKER / CI/CD</text>
+<g transform="translate(650 34) scale(1.35)" font-family="monospace" font-size="3.4" fill="#17202b" aria-label="Imad Jennah binary portrait">
+{portrait}
+</g>'''
+    write("hero.svg", 1000, 360, body, "Imad Jennah, Full Stack Engineer, with animated binary portrait from ImFix portfolio")
 
 
 def render_tiles() -> None:
     worlds = [
         ("build", "01 / BUILD", "Full stack apps", "From thoughtful UI to reliable APIs", "#2458ff", "#ffffff"),
-        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker � GitHub Actions � CI/CD", "#ef3b2d", "#ffffff"),
+        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker  /  GitHub Actions  /  CI/CD", "#ef3b2d", "#ffffff"),
         ("explore", "03 / EXPLORE", "Cloud + AI", "Curious by design, learning by building", "#f3c928", INK),
     ]
     for i, (file, kicker, title, subtitle, color, foreground) in enumerate(worlds):
@@ -157,10 +186,10 @@ def render_activity(data: dict) -> None:
 
 def render_projects() -> None:
     projects = [
-        ("meeting-room", "Meeting Room Booking System", "ASP.NET Core � React � PostgreSQL", "REST API � Auth � live availability"),
-        ("cicd", "React CI/CD Pipeline", "Docker � GitHub Actions � React", "Automated tests � Containerization � Deploy"),
-        ("linux-monitoring", "Linux Web Server + Monitoring", "Linux � Nginx � Bash", "Performance tracking � Security hardening"),
-        ("equipment-manager", "IT Equipment Request Manager", "Spring Boot � React � SQL Server", "Request tracking � Analytics dashboard"),
+        ("meeting-room", "Meeting Room Booking System", "ASP.NET Core  /  React  /  PostgreSQL", "REST API  /  Auth  /  live availability"),
+        ("cicd", "React CI/CD Pipeline", "Docker  /  GitHub Actions  /  React", "Automated tests  /  Containerization  /  Deploy"),
+        ("linux-monitoring", "Linux Web Server + Monitoring", "Linux  /  Nginx  /  Bash", "Performance tracking  /  Security hardening"),
+        ("equipment-manager", "IT Equipment Request Manager", "Spring Boot  /  React  /  SQL Server", "Request tracking  /  Analytics dashboard"),
     ]
     for i, (slug, title, stack, detail) in enumerate(projects):
         x = 18
