@@ -1,0 +1,14 @@
+"""Render a compact toolkit, selected work and AI panel."""
+from pathlib import Path
+from html import escape
+ROOT=Path(__file__).resolve().parents[1]
+def main():
+ css='@keyframes rise{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}.entry{animation:rise .8s ease both}@media(prefers-reduced-motion:reduce){.entry{animation:none}.motion{display:none}}'
+ body='''<defs><linearGradient id="bg" x2="1" y2="1"><stop stop-color="#202c3c"/><stop offset="1" stop-color="#171a1b"/></linearGradient><linearGradient id="shine"><stop stop-color="#c0cad6" stop-opacity="0"/><stop offset=".5" stop-color="#c0cad6" stop-opacity=".10"/><stop offset="1" stop-color="#c0cad6" stop-opacity="0"/></linearGradient><clipPath id="clip"><rect x="1" y="1" width="878" height="378" rx="14"/></clipPath></defs><rect x="1" y="1" width="878" height="378" rx="14" fill="url(#bg)" stroke="#414c5a"/><g class="motion" clip-path="url(#clip)"><rect x="-200" width="180" height="380" fill="url(#shine)"><animate attributeName="x" values="-200;900;900" dur="9s" repeatCount="indefinite"/></rect></g><path d="M32 98H848M440 122V275M32 294H848" stroke="#3a4553"/><circle class="motion" cx="842" cy="32" r="4" fill="#becada"><animate attributeName="opacity" values=".4;1;.4" dur="3s" repeatCount="indefinite"/></circle>'''
+ def text(x,y,s,size=14,color='#d7dfe8'):
+  return f'<text class="entry" x="{x}" y="{y}" font-size="{size}" fill="{color}">{escape(s)}</text>'
+ lines=[(32,34,'TOOLKIT / SELECTED WORK / AI',11,'#9eafc3'),(32,75,'Build. Automate. Explore.',28,'#edf0f3'),(32,133,'TECHNOLOGIES',11,'#9eafc3'),(32,163,'React · Angular · Next.js',15,'#e0e5eb'),(32,191,'Spring Boot · ASP.NET Core',15,'#e0e5eb'),(32,219,'TypeScript · PostgreSQL · SQL Server',13,'#b6c1cf'),(32,253,'TOOLS + LIBRARIES',11,'#9eafc3'),(32,277,'Docker · GitHub Actions · Tailwind CSS',13,'#d7dfe8'),(470,133,'SELECTED PROJECTS',11,'#9eafc3'),(470,163,'Alias Convert PDF',16,'#e0e5eb'),(470,188,'Bank statements · OCR · Sage exports',12,'#aebac9'),(470,226,'TeamTalk',16,'#e0e5eb'),(470,251,'Full-stack team communication',12,'#aebac9'),(470,277,'More projects on GitHub ↗',11,'#8e9fb4'),(32,326,'AI / CODING ASSISTANTS',11,'#9eafc3'),(32,354,'Codex · Claude Code',16,'#e0e5eb'),(470,326,'Explore ideas. Write. Review.',12,'#b6c1cf'),(470,352,'AI-assisted development, human judgment.',12,'#8e9fb4')]
+ body+='<g font-family="ui-monospace,SFMono-Regular,Menlo,monospace">'+''.join(text(*line) for line in lines)+'</g>'
+ out=ROOT/'cards'/'profile-overview.svg'
+ out.write_text('<svg xmlns="http://www.w3.org/2000/svg" width="880" height="380" viewBox="0 0 880 380" role="img" aria-label="Technologies, tools and libraries. Selected projects: Alias Convert PDF and TeamTalk. AI coding assistants: Codex and Claude Code."><title>Toolkit, selected work and AI</title><style>'+css+'</style>'+body+'</svg>')
+if __name__=='__main__':main()
