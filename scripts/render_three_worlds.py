@@ -57,6 +57,7 @@ FONT_FILES = {
 }
 
 BASE_CSS = """
+@keyframes codeTurn{0%,65%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.code-turn{transform-box:fill-box;transform-origin:center;animation:codeTurn 8s cubic-bezier(.45,0,.25,1) infinite}@media(prefers-reduced-motion:reduce){.code-turn{animation:none}}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
@@ -153,7 +154,7 @@ def hero():
 <text class="f" {d(.8)} x="48" y="396" font-family="{MONO}" font-size="13" fill="{TECH}">im-fix.vercel.app &#8599;</text>
 <g class="f" {d(.4)} transform="translate(570 110)">
 <circle cx="112" cy="112" r="110" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
-<g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>
+<g class="code-turn"><g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g></g>
 """
     write("hero-design.svg", svg(W,420,body,["serif","serif-i","sans","mono"],"Imad Jennah. Full Stack Engineer. im-fix.vercel.app"))
 
@@ -401,11 +402,11 @@ if __name__ == "__main__":
     heatmap(data)
     activity(data)
     tile("build", "BUILD", "#0f1f33", "#e2e8f0", "12", "projects",
-         "Public projects, from full stack apps to developer tools.", 3.1, 0, accent="#60a5fa")
-    tile("brand", "AUTOMATE", "#12263f", "#e2e8f0", "3", "pillars",
-         "Docker, CI/CD and Linux. Build, ship and automate.", 3.35, 1, accent="#38bdf8")
-    tile("learn", "EXPLORE", "#162033", "#e2e8f0", "2", "worlds",
-         "Software engineering and applied AI. Learning by building.", 3.6, 2, accent="#a5b4fc")
+         "Public projects, from full stack apps to developer tools.", 3.1, 0, accent="#9bb9dd")
+    tile("brand", "AUTOMATE", "#303640", "#e2e8f0", "3", "pillars",
+         "Docker, CI/CD and Linux. Build, ship and automate.", 3.35, 1, accent="#c3cfdd")
+    tile("learn", "EXPLORE", "#afb8c4", "#172536", "2", "worlds",
+         "Software engineering and applied AI. Learning by building.", 3.6, 2, accent="#253a55")
     for i, (name, desc, lang, color) in enumerate(REPOS):
         repo_card(i,name,desc,lang,color,0)
     section_title("What I'm","building","dark")

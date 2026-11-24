@@ -26,7 +26,7 @@
 .sh{animation:sheen 5s ease-in-out infinite}
 .rg{opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 1s ease-out both}
 @media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro,.rg{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}}
-</style>
+@keyframes codeTurn{0%,65%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.code-turn{transform-box:fill-box;transform-origin:center;animation:codeTurn 8s cubic-bezier(.45,0,.25,1) infinite}@media(prefers-reduced-motion:reduce){.code-turn{animation:none}}</style>
 <rect width="880" height="420" rx="14" fill="#171a1b"/>
 <rect class="live" x="48" y="49" width="8" height="8" rx="2" fill="#9cb6cf"/>
 <text class="f" style="animation-delay:0.00s" x="66" y="57" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" letter-spacing="1" fill="#9aa2a1">FULL STACK ENGINEER / CASABLANCA</text>
@@ -36,5 +36,5 @@
 <text class="f" style="animation-delay:0.80s" x="48" y="396" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="13" fill="#9cb6cf">im-fix.vercel.app &#8599;</text>
 <g class="f" style="animation-delay:0.40s" transform="translate(570 110)">
 <circle cx="112" cy="112" r="110" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
-<g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>
+<g class="code-turn"><g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g></g>
 </svg>

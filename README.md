@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://im-fix.vercel.app/">
-    <img src="./cards/hero-design.svg?v=dark-cards-2" width="100%" alt="Imad Jennah — Full-stack software engineer in Casablanca, Morocco" />
+    <img src="./cards/hero-design.svg?v=spin-silver-1" width="100%" alt="Imad Jennah — Full-stack software engineer in Casablanca, Morocco" />
   </a>
   <br>
   <img src="./cards/heatmap.svg?v=dark-cards-2" width="100%" alt="Contribution activity" />
@@ -15,7 +15,7 @@
 <a href="https://github.com/JENNAH-IMAD?tab=repositories"><img src="./cards/profile-overview.svg?v=compact-1" width="100%" alt="Technologies, tools and libraries · Projects: Alias Convert PDF and TeamTalk · AI: Codex and Claude Code" /></a>
 
 <div align="center">
-  <a href="https://im-fix.vercel.app/"><img src="./cards/build.svg?v=navy-accents-1" width="33%" alt="Build useful applications" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/brand.svg?v=navy-accents-1" width="33%" alt="Automate with Docker, CI/CD, and Linux" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/learn.svg?v=navy-accents-1" width="33%" alt="Explore cloud and AI" /></a>
+  <a href="https://im-fix.vercel.app/"><img src="./cards/build.svg?v=spin-silver-1" width="33%" alt="Build useful applications" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/brand.svg?v=spin-silver-1" width="33%" alt="Automate with Docker, CI/CD, and Linux" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/learn.svg?v=spin-silver-1" width="33%" alt="Explore cloud and AI" /></a>
 </div>
 
 <div align="center">
