@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="880.000" height="432" viewBox="0 0 880.000 432" role="img" aria-label="Imad Jennah. Full Stack Engineer. im-fix.vercel.app"><title>Imad Jennah. Full Stack Engineer. im-fix.vercel.app</title><style>
+@keyframes codeTurn{0%,65%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.code-turn{transform-box:fill-box;transform-origin:center;animation:codeTurn 8s cubic-bezier(.45,0,.25,1) infinite}@media(prefers-reduced-motion:reduce){.code-turn{animation:none}}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
@@ -26,7 +27,7 @@
 .sh{animation:sheen 5s ease-in-out infinite}
 .rg{opacity:0;transform-box:fill-box;transform-origin:center;animation:ring 1s ease-out both}
 @media (prefers-reduced-motion: reduce){.r,.f,.g,.p,.live,.n,.nu,.ti,.sl,.ai,.ro,.rg{animation:none!important;opacity:1!important;transform:none!important}.sh,.rg{display:none}}
-@keyframes codeTurn{0%,65%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.code-turn{transform-box:fill-box;transform-origin:center;animation:codeTurn 8s cubic-bezier(.45,0,.25,1) infinite}@media(prefers-reduced-motion:reduce){.code-turn{animation:none}}</style>
+</style>
 <rect width="880" height="420" rx="14" fill="#171a1b"/>
 <rect class="live" x="48" y="49" width="8" height="8" rx="2" fill="#9cb6cf"/>
 <text class="f" style="animation-delay:0.00s" x="66" y="57" font-family="ui-monospace,SFMono-Regular,Menlo,Consolas,monospace" font-size="12" letter-spacing="1" fill="#9aa2a1">FULL STACK ENGINEER / CASABLANCA</text>

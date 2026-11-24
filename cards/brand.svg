@@ -1,4 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="293.333" height="222" viewBox="0 0 293.333 222" role="img" aria-label="AUTOMATE: 3 pillars. Docker, CI/CD and Linux. Build, ship and automate."><title>AUTOMATE: 3 pillars. Docker, CI/CD and Linux. Build, ship and automate.</title><style>
+@keyframes codeTurn{0%,65%{transform:rotate(0deg)}100%{transform:rotate(360deg)}}.code-turn{transform-box:fill-box;transform-origin:center;animation:codeTurn 8s cubic-bezier(.45,0,.25,1) infinite}@media(prefers-reduced-motion:reduce){.code-turn{animation:none}}
 @keyframes rise{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
 @keyframes grow{from{transform:scaleY(0)}to{transform:scaleY(1)}}
