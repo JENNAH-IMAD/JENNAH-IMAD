@@ -2,7 +2,7 @@
 
 <div align="center">
   <a href="https://im-fix.vercel.app/">
-    <img src="./cards/portfolio-theme.svg" width="100%" alt="Imad Jennah — Full-stack software engineer in Casablanca, Morocco" />
+    <img src="./cards/portfolio-theme.gif" width="100%" alt="Animated portfolio banner — Imad Jennah, full-stack software engineer in Casablanca, Morocco" />
   </a>
 </div>
 
