@@ -40,9 +40,9 @@ INK = "#e6e8e7"
 INK_SOFT = "#b9c0bf"
 MUTED = "#9aa2a1"
 RULE = "#373c3e"
-TECH = "#2f55ff"
-STUDIO = "#ef3b2d"
-LEARN = "#ffc81a"
+TECH = "#9cb6cf"
+STUDIO = "#c6aaa9"
+LEARN = "#c9bea1"
 W = 880  # full card width, GitHub's README column at 100%
 
 SERIF = "ui-monospace, SFMono-Regular, Menlo, monospace"
@@ -415,11 +415,11 @@ if __name__ == "__main__":
     hero()
     heatmap(data)
     activity(data)
-    tile("build", "BUILD", TECH, "#ffffff", "4", "projects",
+    tile("build", "BUILD", "#223346", "#ffffff", "4", "projects",
          "Full stack applications, from user interfaces to reliable APIs.", 3.1, 0)
-    tile("brand", "AUTOMATE", STUDIO, "#ffffff", "3", "pillars",
+    tile("brand", "AUTOMATE", "#3b292f", "#ffffff", "3", "pillars",
          "Docker, CI/CD and Linux. Ship clean code, automate everything.", 3.35, 1)
-    tile("learn", "EXPLORE", LEARN, INK, "2", "worlds",
+    tile("learn", "EXPLORE", "#353226", INK, "2", "worlds",
          "Cloud-native architecture and AI. Learning by building.", 3.6, 2)
     for i, (name, desc, lang, color) in enumerate(REPOS):
         repo_card(i,name,desc,lang,color,0)

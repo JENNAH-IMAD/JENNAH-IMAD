@@ -16,7 +16,7 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 CARDS = ROOT / "cards"
 USER = os.environ.get("GH_PROFILE_USER", "JENNAH-IMAD")
-PAPER, INK, MUTED, BLUE, RULE = "#171a1b", "#e6e8e7", "#9aa2a1", "#2369b3", "#373c3e"
+PAPER, INK, MUTED, BLUE, RULE = "#171a1b", "#e6e8e7", "#9aa2a1", "#9cb6cf", "#373c3e"
 SERIF = "ui-monospace,SFMono-Regular,Menlo,monospace"
 SANS = "system-ui,-apple-system,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,Menlo,monospace"
@@ -113,9 +113,9 @@ def render_hero() -> None:
 
 def render_tiles() -> None:
     worlds = [
-        ("build", "01 / BUILD", "Full stack apps", "From thoughtful UI to reliable APIs", "#2458ff", "#ffffff"),
-        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker  /  GitHub Actions  /  CI/CD", "#ef3b2d", "#ffffff"),
-        ("explore", "03 / EXPLORE", "Cloud + AI", "Curious by design, learning by building", "#f3c928", INK),
+        ("build", "01 / BUILD", "Full stack apps", "From thoughtful UI to reliable APIs", "#223346", "#ffffff"),
+        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker  /  GitHub Actions  /  CI/CD", "#3b292f", "#ffffff"),
+        ("explore", "03 / EXPLORE", "Cloud + AI", "Curious by design, learning by building", "#353226", INK),
     ]
     for i, (file, kicker, title, subtitle, color, foreground) in enumerate(worlds):
         body = f'''<rect x="4" y="4" width="324" height="174" rx="14" fill="{color}"/>
