@@ -29,7 +29,7 @@
 </style>
 <rect width="285.3333333333333" height="176" rx="14" fill="#171a1b"/>
 <g class="r" style="animation-delay:4.60s">
-  <rect x="24" y="30" width="8" height="8" rx="2" fill="#2f55ff"/>
+  <rect x="24" y="30" width="8" height="8" rx="2" fill="#9cb6cf"/>
   <text x="40" y="39" font-family="system-ui, -apple-system, sans-serif" font-weight="600" font-size="18" fill="#e6e8e7">room-booking</text>
   <text x="24" y="72" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#b9c0bf">Meeting room booking with</text><text x="24" y="93" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#b9c0bf">authentication and real-time</text><text x="24" y="114" font-family="system-ui, -apple-system, sans-serif" font-size="14" fill="#b9c0bf">availability.</text>
   <text x="24" y="152" font-family="'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace" font-size="12" fill="#9aa2a1">React / .NET  /  project</text>

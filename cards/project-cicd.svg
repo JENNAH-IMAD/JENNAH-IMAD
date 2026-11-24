@@ -8,8 +8,8 @@
 .pulse{animation:pulse 2.4s ease-in-out infinite}
 @media(prefers-reduced-motion:reduce){.rise,.fade,.bar,.pulse{animation:none!important;opacity:1!important;transform:none!important}}
 </style><rect x="4" y="4" width="472" height="142" rx="14" fill="#171a1b" stroke="#373c3e"/>
-<rect x="18" y="25" width="5" height="5" rx="2" fill="#2369b3"/>
+<rect x="18" y="25" width="5" height="5" rx="2" fill="#9cb6cf"/>
 <text class="rise" x="36" y="43" style="animation-delay:0.10s" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="23" fill="#e6e8e7">React CI/CD Pipeline</text>
-<text x="22" y="79" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#2369b3">Docker  /  GitHub Actions  /  React</text>
+<text x="22" y="79" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="11" fill="#9cb6cf">Docker  /  GitHub Actions  /  React</text>
 <text x="22" y="112" font-family="system-ui,-apple-system,sans-serif" font-size="13" fill="#9aa2a1">Automated tests  /  Containerization  /  Deploy</text>
-<text x="446" y="126" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#2369b3">&#8599;</text></svg>
+<text x="446" y="126" font-family="ui-monospace,SFMono-Regular,Menlo,monospace" font-size="13" fill="#9cb6cf">&#8599;</text></svg>
