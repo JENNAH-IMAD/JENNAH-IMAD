@@ -10,39 +10,29 @@
   <img src="./cards/activity.svg?v=dark-cards-2" width="100%" alt="Monthly coding activity" />
 </div>
 
-## `imad@github:~$ whoami`
+<img src="./cards/profile-intro.svg?v=silver-navy-1" width="100%" alt="Profile — software engineer, Casablanca, open to opportunities" />
 
-Software engineer · Full-stack developer · AI enthusiast  
-Casablanca, Morocco · Open to new opportunities
+<img src="./cards/profile-toolkit.svg?v=silver-navy-1" width="100%" alt="Frontend, backend, data and delivery tools" />
 
-I turn ideas into useful applications. My experience spans business tools, web platforms, and freelance projects, from understanding the need to building and deploying the solution. I work across React, Angular, Spring Boot, and ASP.NET Core, and use AI to explore ideas and speed up repetitive work while checking and understanding the results.
+<img src="./cards/profile-work.svg?v=silver-navy-1" width="100%" alt="Selected projects" />
 
-## `./stack --highlights`
+<a href="https://github.com/JENNAH-IMAD/Application-web-de-gestion-des-demandes-des-equipements"><img src="./cards/featured-equipment.svg?v=silver-navy-1" width="100%" alt="IT Equipment Request Manager — open repository" /></a>
 
-| Front end | Back end | Data & delivery |
-| :--- | :--- | :--- |
-| React · Angular · Next.js · TypeScript | Spring Boot · ASP.NET Core · Node.js | PostgreSQL · MySQL · SQL Server |
-| Tailwind CSS · Ant Design · Bootstrap | REST APIs · JWT · SignalR | Docker · GitHub Actions · Linux |
+<a href="https://github.com/JENNAH-IMAD/Team-Talk"><img src="./cards/featured-team.svg?v=silver-navy-1" width="100%" alt="TeamTalk — open repository" /></a>
 
-## `./work --featured`
+<a href="https://github.com/JENNAH-IMAD/Insect-detector"><img src="./cards/featured-insect.svg?v=silver-navy-1" width="100%" alt="Insect Detector — open repository" /></a>
 
-- **[IT Equipment Request Manager](https://github.com/JENNAH-IMAD/Application-web-de-gestion-des-demandes-des-equipements)** — Internal request and approval workflow.
+<a href="https://github.com/JENNAH-IMAD/Meeting-Planner"><img src="./cards/featured-meeting.svg?v=silver-navy-1" width="100%" alt="Meeting Planner — open repository" /></a>
 
-- **[TeamTalk](https://github.com/JENNAH-IMAD/Team-Talk)** — Full-stack team communication platform.
-
-- **[Insect Detector](https://github.com/JENNAH-IMAD/Insect-detector)** — Insect classification project using machine learning.
-
-- **[Meeting Planner](https://github.com/JENNAH-IMAD/Meeting-Planner)** — Meeting-room booking application.
+<a href="https://github.com/JENNAH-IMAD/Alias-convertpdf"><img src="./cards/featured-alias.svg?v=silver-navy-1" width="100%" alt="Alias Convert PDF — open repository" /></a>
 
 <div align="center">
-  <a href="https://im-fix.vercel.app/"><img src="./cards/build.svg?v=dark-cards-2" width="33%" alt="Build useful applications" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/brand.svg?v=dark-cards-2" width="33%" alt="Automate with Docker, CI/CD, and Linux" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/learn.svg?v=dark-cards-2" width="33%" alt="Explore cloud and AI" /></a>
+  <a href="https://im-fix.vercel.app/"><img src="./cards/build.svg?v=silver-navy-1" width="33%" alt="Build useful applications" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/brand.svg?v=silver-navy-1" width="33%" alt="Automate with Docker, CI/CD, and Linux" /></a><a href="https://im-fix.vercel.app/"><img src="./cards/learn.svg?v=silver-navy-1" width="33%" alt="Explore cloud and AI" /></a>
 </div>
 
-## `./now`
+<img src="./cards/profile-now.svg?v=silver-navy-1" width="100%" alt="Current focus and engineering degree" />
 
-I’m building full-stack applications, learning more about cloud and AI, and looking for a team where I can contribute and keep growing. I hold an engineering degree in Computer Science and Networks, with a specialization in MIAGE, from EMSI Casablanca.
-
-## `./connect`
+<img src="./cards/profile-connect.svg?v=silver-navy-1" width="100%" alt="Connect with Imad Jennah" />
 
 <div align="center">
   <a href="https://im-fix.vercel.app/"><img src="./cards/connect-portfolio.svg?v=dark-cards-2" width="24%" alt="Portfolio" /></a><a href="https://www.linkedin.com/in/imad-jennah/"><img src="./cards/connect-linkedin.svg?v=dark-cards-2" width="24%" alt="LinkedIn" /></a><a href="mailto:imad.jennah.pro@gmail.com"><img src="./cards/connect-email.svg?v=dark-cards-2" width="24%" alt="Email" /></a><a href="https://github.com/JENNAH-IMAD?tab=repositories"><img src="./cards/connect-repos.svg?v=dark-cards-2" width="24%" alt="Repositories" /></a>

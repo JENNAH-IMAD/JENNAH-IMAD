@@ -415,12 +415,12 @@ if __name__ == "__main__":
     hero()
     heatmap(data)
     activity(data)
-    tile("build", "BUILD", "#223346", "#ffffff", "4", "projects",
-         "Full stack applications, from user interfaces to reliable APIs.", 3.1, 0)
-    tile("brand", "AUTOMATE", "#3b292f", "#ffffff", "3", "pillars",
-         "Docker, CI/CD and Linux. Ship clean code, automate everything.", 3.35, 1)
-    tile("learn", "EXPLORE", "#353226", INK, "2", "worlds",
-         "Cloud-native architecture and AI. Learning by building.", 3.6, 2)
+    tile("build", "BUILD", "#182b45", "#e5eaf0", "12", "repos",
+         "Public project repositories, excluding this profile.", 3.1, 0)
+    tile("brand", "AUTOMATE", "#30353d", "#e2e5e9", "5", "repos",
+         "Docker-based projects. CI/CD and Linux backups in practice.", 3.35, 1)
+    tile("learn", "EXPLORE", "#aab4c0", "#17202d", "2", "repos",
+         "Computer vision and document OCR: Insect Detector and Alias.", 3.6, 2)
     for i, (name, desc, lang, color) in enumerate(REPOS):
         repo_card(i,name,desc,lang,color,0)
     section_title("What I'm","building","dark")

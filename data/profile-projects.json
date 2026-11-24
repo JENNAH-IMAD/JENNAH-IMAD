@@ -1,0 +1,42 @@
+{
+  "checked": "2026-11-24",
+  "public_project_repositories": [
+    "Application-web-de-gestion-des-demandes-des-equipements",
+    "Alias-convertpdf",
+    "todo-cicd-app",
+    "Meeting-Planner",
+    "Insect-detector",
+    "Serveur-Web-Linux-Monitoring",
+    "react-devops-project",
+    "factorielapp",
+    "Portfolio",
+    "Team-Talk",
+    "kechmara",
+    "AuthentificationAPP"
+  ],
+  "excluded": [
+    "JENNAH-IMAD profile repository",
+    "private repositories"
+  ],
+  "docker_projects": [
+    "todo-cicd-app",
+    "react-devops-project",
+    "Alias-convertpdf",
+    "factorielapp",
+    "kechmara"
+  ],
+  "vision_ocr_projects": [
+    "Insect-detector",
+    "Alias-convertpdf"
+  ],
+  "automation_evidence": {
+    "todo-cicd-app": [
+      "Dockerfile",
+      "docker-compose.yml",
+      ".github/workflows/ci-cd.yml"
+    ],
+    "Serveur-Web-Linux-Monitoring": [
+      "README.md: Bash backup, Nginx, UFW"
+    ]
+  }
+}
