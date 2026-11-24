@@ -197,7 +197,8 @@ def count_up(num, word, x, y, attrs, begin, dur=1.1, frames=18):
     return "".join(out)
 
 
-def tile(name, label, color, on, num, word, blurb, delay, pos):
+def tile(name, label, color, on, num, word, blurb, delay, pos, accent=None):
+    accent = accent or on
     lines = wrap(blurb, 34)
     blurb_svg = "".join(
         f'<text class="r" {d(delay + 0.75 + i * 0.1)} x="24" y="{150 + i * 20}" font-family="{SANS}" '
@@ -214,13 +215,13 @@ def tile(name, label, color, on, num, word, blurb, delay, pos):
 <g class="ti" {d(delay)}>
   <g clip-path="url(#card)">
     <rect width="{TILE_W}" height="{TILE_H}" fill="{color}"/>
-    <circle class="rg" {d(delay + 0.5)} cx="{TILE_W - 40}" cy="{TILE_H - 40}" r="60" fill="none" stroke="{on}" stroke-opacity=".5" stroke-width="2"/>
+    <circle class="rg" {d(delay + 0.5)} cx="{TILE_W - 40}" cy="{TILE_H - 40}" r="60" fill="none" stroke="{accent}" stroke-opacity=".5" stroke-width="2"/>
     <rect class="sh" style="animation-delay:{delay + 1.4:.2f}s" x="0" y="-20" width="90" height="{TILE_H + 40}" fill="url(#gl)" transform="translate(-260 0)"/>
   </g>
-  <text class="sl" {d(delay + 0.35)} x="24" y="38" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{on}">{label}</text>
-  <g class="ai" {d(delay + 0.5)}><text class="n" style="animation-delay:{delay + 1.3:.2f}s" x="250" y="38" font-family="{MONO}" font-size="14" fill="{on}">&#8594;</text></g>
+  <text class="sl" {d(delay + 0.35)} x="24" y="38" font-family="{MONO}" font-size="12" letter-spacing="1.2" fill="{accent}">{label}</text>
+  <g class="ai" {d(delay + 0.5)}><text class="n" style="animation-delay:{delay + 1.3:.2f}s" x="250" y="38" font-family="{MONO}" font-size="14" fill="{accent}">&#8594;</text></g>
   <g clip-path="url(#slot)"><g class="ro" {d(delay + 0.45)}>
-    {count_up(num, word, 22, 112, f'font-family="{SERIF}" font-size="44" fill="{on}"', delay + 0.45)}
+    {count_up(num, word, 22, 112, f'font-family="{SERIF}" font-size="{38 if len(str(num)) > 1 else 44}" fill="{accent}"', delay + 0.45)}
   </g></g>
   {blurb_svg}
 </g>
@@ -415,12 +416,12 @@ if __name__ == "__main__":
     hero()
     heatmap(data)
     activity(data)
-    tile("build", "BUILD", "#182b45", "#e5eaf0", "12", "repos",
-         "Public project repositories, excluding this profile.", 3.1, 0)
-    tile("brand", "AUTOMATE", "#30353d", "#e2e5e9", "5", "repos",
-         "Docker-based projects. CI/CD and Linux backups in practice.", 3.35, 1)
-    tile("learn", "EXPLORE", "#aab4c0", "#17202d", "2", "repos",
-         "Computer vision and document OCR: Insect Detector and Alias.", 3.6, 2)
+    tile("build", "BUILD", "#0f1f33", "#e2e8f0", "12", "projects",
+         "Public projects, from full stack apps to developer tools.", 3.1, 0, accent="#60a5fa")
+    tile("brand", "AUTOMATE", "#12263f", "#e2e8f0", "3", "pillars",
+         "Docker, CI/CD and Linux. Build, ship and automate.", 3.35, 1, accent="#38bdf8")
+    tile("learn", "EXPLORE", "#162033", "#e2e8f0", "2", "worlds",
+         "Software engineering and applied AI. Learning by building.", 3.6, 2, accent="#a5b4fc")
     for i, (name, desc, lang, color) in enumerate(REPOS):
         repo_card(i,name,desc,lang,color,0)
     section_title("What I'm","building","dark")
