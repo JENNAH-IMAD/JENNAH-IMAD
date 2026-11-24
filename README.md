@@ -6,32 +6,25 @@
   </a>
 </div>
 
-## `imad@portfolio:~/profile`
 
-**Software engineer · Full-stack developer · AI enthusiast**  
-Casablanca, Morocco · Open to new opportunities
+<img src="./cards/profile-intro.gif" width="100%" alt="Profile — Software engineer in Casablanca, open to opportunities" />
 
-I like turning an idea into a useful application. I have worked on business tools, booking systems, and communication platforms, from understanding the need to developing and deploying the solution. I work across **React, Angular, Spring Boot, and ASP.NET Core**. I also use AI to explore solutions and speed up repetitive work, while taking time to understand and verify the results.
+<img src="./cards/profile-stack.gif" width="100%" alt="Toolkit — React, Angular, Spring Boot, ASP.NET Core, databases and DevOps" />
 
-## `./stack`
+<img src="./cards/profile-projects.gif" width="100%" alt="Selected projects" />
 
-**Frontend** · React · Angular · Next.js · TypeScript · Tailwind CSS · Ant Design  
-**Backend** · Spring Boot · ASP.NET Core · Node.js · Django · REST APIs · JWT  
-**Data** · PostgreSQL · MySQL · SQL Server · MongoDB  
-**DevOps** · Docker · GitHub Actions · Linux · Nginx · Terraform · Google Cloud
+<a href="https://github.com/JENNAH-IMAD/Meeting-Planner"><img src="./cards/profile-project-meeting-planner.gif" width="100%" alt="Meeting Planner — view repository" /></a>
 
-## `./projects --featured`
+<a href="https://github.com/JENNAH-IMAD/Team-Talk"><img src="./cards/profile-project-team-talk.gif" width="100%" alt="TeamTalk — view repository" /></a>
 
-- **[Meeting Planner](https://github.com/JENNAH-IMAD/Meeting-Planner)** · Meeting-room booking and availability.
-- **[TeamTalk](https://github.com/JENNAH-IMAD/Team-Talk)** · Full-stack team communication platform.
-- **[IT Equipment Request Manager](https://github.com/JENNAH-IMAD/Application-web-de-gestion-des-demandes-des-equipements)** · IT equipment requests and approval workflow.
-- **[Insect Detector](https://github.com/JENNAH-IMAD/Insect-detector)** · Insect classification with machine learning.
-- **[Portfolio](https://github.com/JENNAH-IMAD/ImFix)** · The site that inspired this README’s visual theme.
+<a href="https://github.com/JENNAH-IMAD/Application-web-de-gestion-des-demandes-des-equipements"><img src="./cards/profile-project-equipment-manager.gif" width="100%" alt="IT Equipment Request Manager — view repository" /></a>
 
-## `./about`
+<a href="https://github.com/JENNAH-IMAD/Insect-detector"><img src="./cards/profile-project-insect-detector.gif" width="100%" alt="Insect Detector — view repository" /></a>
 
-I earned an engineering degree in **Computer Science and Networks**, specializing in **MIAGE**, from EMSI Casablanca. My experience includes full-stack internships at Eurafric Information and Munisys, as well as freelance application development.
+<a href="https://github.com/JENNAH-IMAD/ImFix"><img src="./cards/profile-project-portfolio.gif" width="100%" alt="Portfolio — view repository" /></a>
 
-## `./contact`
+<img src="./cards/profile-about.gif" width="100%" alt="Background — Computer Science and Networks, MIAGE, EMSI Casablanca; internships and freelance development" />
+
+<img src="./cards/profile-contact.gif" width="100%" alt="Contact — Available for opportunities" />
 
 [Portfolio](https://im-fix.vercel.app/) · [LinkedIn](https://www.linkedin.com/in/imad-jennah/) · [Email](mailto:imad.jennah.pro@gmail.com) · [Repositories](https://github.com/JENNAH-IMAD?tab=repositories)

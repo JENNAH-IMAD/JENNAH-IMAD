@@ -27,6 +27,7 @@ jobs:
           python scripts/render_profile.py
           python scripts/render_three_worlds.py
           python scripts/render_banner.py
+          python scripts/render_sections.py
       - name: Commit refreshed cards
         uses: stefanzweifel/git-auto-commit-action@v5
         with:
