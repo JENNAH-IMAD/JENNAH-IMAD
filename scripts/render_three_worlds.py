@@ -1,10 +1,19 @@
 #!/usr/bin/env python3
 """
-Render animated profile cards with the ImFix portfolio theme.
+Render the profile README's cards as animated SVGs into cards/.
 
-Cards use charcoal surfaces, restrained monochrome accents, and compact system
-fonts. Live statistics come from cached contribution data and refresh through
-the profile-card GitHub Actions workflow.
+Design: "Three Worlds", matched to avivashishta.com (paper, ink, and one colour per
+world: BUILD blue, BRAND red, LEARN yellow; Instrument Serif, Geist, Geist Mono).
+
+Every card is a standalone SVG shown through <img>, so it can only use what GitHub
+allows there: inline CSS animations, SMIL and fonts embedded as data URIs (no JS,
+no external requests). Fonts are subset WOFFs in fonts/ (SIL OFL).
+
+Live numbers come from data/contributions.json (fetch_contributions.py). The
+brand and blog numbers are set by hand below; they come from data/stats.json in
+the avivashishta.com repo.
+
+Run by .github/workflows/update-profile-art.yml after fetch_contributions.py.
 """
 import base64
 import datetime
@@ -20,7 +29,7 @@ OUT = os.path.join(ROOT, "cards")
 FONTS = os.path.join(ROOT, "fonts")
 PORTRAIT = os.path.join(ROOT, "avi-ascii.svg")
 
-# ---- profile statistics -----------------------------------------------------
+# ---- hand-set numbers (update from avivashishta.com data/stats.json) --------
 REEL_VIEWS = "12.7M"
 BLOG_READERS = "27.5K"
 
@@ -31,14 +40,14 @@ INK = "#e6e8e7"
 INK_SOFT = "#b9c0bf"
 MUTED = "#9aa2a1"
 RULE = "#373c3e"
-TECH = "#c6cecd"
-STUDIO = "#aab2b1"
-LEARN = "#d2d8d7"
+TECH = "#2f55ff"
+STUDIO = "#ef3b2d"
+LEARN = "#ffc81a"
 W = 880  # full card width, GitHub's README column at 100%
 
-SERIF = "ui-monospace,SFMono-Regular,Menlo,monospace"
-SANS = "system-ui,-apple-system,BlinkMacSystemFont,sans-serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,monospace"
+SERIF = "ui-monospace, SFMono-Regular, Menlo, monospace"
+SANS = "system-ui, -apple-system, sans-serif"
+MONO = "'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
 
 FONT_FILES = {
     "serif": ("Instrument Serif", "normal", 400, "serif-400.woff"),
@@ -159,8 +168,8 @@ def hero():
 <g class="r" {d(.55)}>{text_lines(48,338,["I build full stack applications", "and automate software delivery."],27,f'font-family="{SANS}" font-size="18" fill="{INK_SOFT}"')}</g>
 <text class="f" {d(.8)} x="48" y="396" font-family="{MONO}" font-size="13" fill="{TECH}">im-fix.vercel.app &#8599;</text>
 <g class="f" {d(.4)} transform="translate(570 110)">
-<circle cx="112" cy="112" r="110" fill="#171a1b" stroke="#373c3e" stroke-width="2"/>
-<g transform="translate(39 30) scale(1.65)" stroke="#e6e8e7" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>
+<circle cx="112" cy="112" r="110" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
+<g transform="translate(39 30) scale(1.65)" stroke="#fff" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>
 """
     write("hero-design.svg", svg(W,420,body,["serif","serif-i","sans","mono"],"Imad Jennah. Full Stack Engineer. im-fix.vercel.app"))
 
@@ -199,8 +208,8 @@ def tile(name, label, color, on, num, word, blurb, delay, pos):
 <defs>
   <clipPath id="card"><rect width="{TILE_W}" height="{TILE_H}" rx="14"/></clipPath>
   <clipPath id="slot"><rect x="0" y="62" width="{TILE_W}" height="62"/></clipPath>
-  <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#e6e8e7" stop-opacity="0"/>
-    <stop offset=".5" stop-color="#e6e8e7" stop-opacity=".35"/><stop offset="1" stop-color="#e6e8e7" stop-opacity="0"/></linearGradient>
+  <linearGradient id="gl" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/>
+    <stop offset=".5" stop-color="#fff" stop-opacity=".35"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
 </defs>
 <g class="ti" {d(delay)}>
   <g clip-path="url(#card)">
@@ -234,7 +243,7 @@ def activity(data):
         is_best = m is best
         bh = max(4, round(m["total"] / top * maxh))
         x = x0 + i * (bw + gap)
-        fill = TECH if is_best else ("#373c3e" if partial else INK)
+        fill = TECH if is_best else ("#c9c9c4" if partial else INK)
         label = datetime.date.fromisoformat(m["month"] + "-01").strftime("%b")
         bars.append(
             f'<rect class="g" style="animation-delay:{2.2 + i * 0.07:.2f}s" x="{x:.1f}" y="{base - bh}" '
@@ -253,7 +262,7 @@ def activity(data):
     total_days = len(data["days"])
     stats = [
         (f'{cs} <tspan font-style="italic">days</tspan>', streak_note),
-        (f'{data["active_days"]}<tspan fill="#9aa2a1"> / {total_days}</tspan>', "days with a commit"),
+        (f'{data["active_days"]}<tspan fill="#8e8e93"> / {total_days}</tspan>', "days with a commit"),
         (f'{data["best_day"]["count"]}', "on the busiest day"),
     ]
     side = []
@@ -303,7 +312,7 @@ def repo_card(i, name, desc, lang, color, stars):
 
 
 def section_title(text, italic, theme):
-    fg = "#e6e8e7" if theme == "dark" else INK
+    fg = "#e6edf3" if theme == "dark" else INK
     body = (
         f'<text class="r" {d(4.4)} x="2" y="46" font-family="{SERIF}" font-size="34" fill="{fg}">{escape(text)} '
         f'<tspan font-style="italic">{escape(italic)}</tspan></text>'
@@ -312,7 +321,7 @@ def section_title(text, italic, theme):
 
 
 # ---- 5 · blue contribution graph -----------------------------------------------
-BLUE = [PAPER_DEEP, "#707a79", "#8a9493", "#aab2b1", TECH, "#c6cecd"]
+BLUE = [PAPER_DEEP, "#c8d3ff", "#94a8ff", "#6280ff", TECH, "#1a3be0"]
 
 
 def level_for(c):
@@ -406,9 +415,9 @@ if __name__ == "__main__":
     hero()
     heatmap(data)
     activity(data)
-    tile("build", "BUILD", TECH, "#e6e8e7fff", "4", "projects",
+    tile("build", "BUILD", TECH, "#ffffff", "4", "projects",
          "Full stack applications, from user interfaces to reliable APIs.", 3.1, 0)
-    tile("brand", "AUTOMATE", STUDIO, "#e6e8e7fff", "3", "pillars",
+    tile("brand", "AUTOMATE", STUDIO, "#ffffff", "3", "pillars",
          "Docker, CI/CD and Linux. Ship clean code, automate everything.", 3.35, 1)
     tile("learn", "EXPLORE", LEARN, INK, "2", "worlds",
          "Cloud-native architecture and AI. Learning by building.", 3.6, 2)

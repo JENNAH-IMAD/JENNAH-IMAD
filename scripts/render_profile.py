@@ -16,10 +16,9 @@ from bs4 import BeautifulSoup
 ROOT = Path(__file__).resolve().parents[1]
 CARDS = ROOT / "cards"
 USER = os.environ.get("GH_PROFILE_USER", "JENNAH-IMAD")
-PAPER, INK, MUTED, BLUE, RULE = "#171a1b", "#e6e8e7", "#9aa2a1", "#c6cecd", "#373c3e"
-PAPER_DEEP = "#222728"
+PAPER, INK, MUTED, BLUE, RULE = "#171a1b", "#e6e8e7", "#9aa2a1", "#2369b3", "#373c3e"
 SERIF = "ui-monospace,SFMono-Regular,Menlo,monospace"
-SANS = "system-ui,-apple-system,BlinkMacSystemFont,sans-serif"
+SANS = "system-ui,-apple-system,sans-serif"
 MONO = "ui-monospace,SFMono-Regular,Menlo,monospace"
 CSS = """
 @keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
@@ -89,8 +88,8 @@ def render_hero() -> None:
 <text class="rise" x="40" y="137" font-family="{SERIF}" font-size="66" fill="{INK}">Imad Jennah</text>
 <text x="44" y="183" font-family="{SANS}" font-size="18" fill="#b9c0bf">Clean interfaces. Reliable APIs. Automated delivery.</text>
 <text x="44" y="236" font-family="{MONO}" font-size="14" fill="{BLUE}">im-fix.vercel.app &#8599;</text>
-<g transform="translate(770 70)"><circle cx="70" cy="70" r="69" fill="#171a1b" stroke="#373c3e" stroke-width="2"/>
-<g transform="translate(21 20)" stroke="#e6e8e7" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>'''
+<g transform="translate(770 70)"><circle cx="70" cy="70" r="69" fill="#0d1117" stroke="#353c44" stroke-width="2"/>
+<g transform="translate(21 20)" stroke="#ffffff" stroke-width="10" stroke-linecap="round" stroke-linejoin="round" fill="none"><path d="M27 31 8 52l19 21M64 31l19 21-19 21M56 15 36 89"/></g></g>'''
     write("hero-logo.svg", 1000, 300, body, "Imad Jennah, Full Stack Engineer. im-fix.vercel.app")
     panels = [
         ("about.svg", "A little about me", [
@@ -114,9 +113,9 @@ def render_hero() -> None:
 
 def render_tiles() -> None:
     worlds = [
-        ("build", "01 / BUILD", "Full stack apps", "From thoughtful UI to reliable APIs", PAPER_DEEP, INK),
-        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker  /  GitHub Actions  /  CI/CD", PAPER_DEEP, INK),
-        ("explore", "03 / EXPLORE", "Cloud + AI", "Curious by design, learning by building", PAPER_DEEP, INK),
+        ("build", "01 / BUILD", "Full stack apps", "From thoughtful UI to reliable APIs", "#2458ff", "#ffffff"),
+        ("automate", "02 / AUTOMATE", "Ship with confidence", "Docker  /  GitHub Actions  /  CI/CD", "#ef3b2d", "#ffffff"),
+        ("explore", "03 / EXPLORE", "Cloud + AI", "Curious by design, learning by building", "#f3c928", INK),
     ]
     for i, (file, kicker, title, subtitle, color, foreground) in enumerate(worlds):
         body = f'''<rect x="4" y="4" width="324" height="174" rx="14" fill="{color}"/>
@@ -131,7 +130,7 @@ def render_heatmap(days: list[dict]) -> None:
     width, height, cell, gap, left, top = 1000, 178, 12, 5, 42, 76
     first = dt.date.fromisoformat(days[0]["date"])
     leading = (first.weekday() + 1) % 7
-    colors = ["#222728", "#707a79", "#8a9493", "#aab2b1", BLUE]
+    colors = ["#222728", "#c7d4ff", "#91aaff", "#5d82ff", BLUE]
     cells, months, seen = [], [], set()
     for index, item in enumerate(days):
         col, row = divmod(index + leading, 7)
@@ -158,7 +157,7 @@ def render_activity(data: dict) -> None:
     for i, (month, value) in enumerate(monthly):
         barh = max(3, round((base-chart_top)*value/max_value))
         x, y = x0+i*step, base-barh
-        color = BLUE if value == max_value else "#b9c0bf"
+        color = BLUE if value == max_value else "#292929"
         label = dt.date.fromisoformat(month+"-01").strftime("%b")
         bars.append(f'<rect class="bar" style="animation-delay:{.9+i*.06:.2f}s" x="{x}" y="{y}" width="{barw}" height="{barh}" rx="4" fill="{color}"><title>{label}: {value} contributions</title></rect>')
         bars.append(f'<text x="{x+barw/2}" y="{base+21}" text-anchor="middle" font-family="{MONO}" font-size="10" fill="{MUTED}">{label}</text>')
