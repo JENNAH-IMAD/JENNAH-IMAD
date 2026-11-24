@@ -4,7 +4,7 @@ from pathlib import Path
 from html import escape
 ROOT=Path(__file__).resolve().parents[1]
 OUT=ROOT/'cards'
-FONT='ui-monospace,SFMono-Regular,Menlo,monospace'
+FONT = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 CSS='@keyframes rise{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}.enter{animation:rise .8s ease both}@media(prefers-reduced-motion:reduce){.enter{animation:none}}'
 def card(name,kicker,title,lines):
  h=145+len(lines)*28

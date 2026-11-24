@@ -45,10 +45,9 @@ STUDIO = "#c6aaa9"
 LEARN = "#c9bea1"
 W = 880  # full card width, GitHub's README column at 100%
 
-SERIF = "ui-monospace, SFMono-Regular, Menlo, monospace"
-SANS = "system-ui, -apple-system, sans-serif"
-MONO = "'Geist Mono', ui-monospace, SFMono-Regular, Menlo, monospace"
-
+SERIF = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+SANS = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 FONT_FILES = {
     "serif": ("Instrument Serif", "normal", 400, "serif-400.woff"),
     "serif-i": ("Instrument Serif", "italic", 400, "serif-italic.woff"),
@@ -89,23 +88,8 @@ BASE_CSS = """
 
 
 def font_face(keys):
-    out = []
-    for k in keys:
-        fam, style, weight, fn = FONT_FILES[k]
-        path = os.path.join(FONTS, fn)
-        if not os.path.exists(path):
-            import requests
-            os.makedirs(FONTS, exist_ok=True)
-            response = requests.get(f"https://raw.githubusercontent.com/AVIVASHISHTA29/AVIVASHISHTA29/main/fonts/{fn}", timeout=30)
-            response.raise_for_status()
-            with open(path, "wb") as font:
-                font.write(response.content)
-        b64 = base64.b64encode(open(path, "rb").read()).decode()
-        out.append(
-            f"@font-face{{font-family:'{fam}';font-style:{style};font-weight:{weight};"
-            f"src:url(data:font/woff;base64,{b64}) format('woff')}}"
-        )
-    return "".join(out)
+    """Use the shared system monospace stack; no remote fonts required."""
+    return ""
 
 
 GAP = 12          # gap between cards, baked into the SVGs (GitHub's own spacing is uneven)

@@ -17,9 +17,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CARDS = ROOT / "cards"
 USER = os.environ.get("GH_PROFILE_USER", "JENNAH-IMAD")
 PAPER, INK, MUTED, BLUE, RULE = "#171a1b", "#e6e8e7", "#9aa2a1", "#9cb6cf", "#373c3e"
-SERIF = "ui-monospace,SFMono-Regular,Menlo,monospace"
-SANS = "system-ui,-apple-system,sans-serif"
-MONO = "ui-monospace,SFMono-Regular,Menlo,monospace"
+SERIF = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+SANS = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
+MONO = "ui-monospace,SFMono-Regular,Menlo,Consolas,monospace"
 CSS = """
 @keyframes rise{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}
 @keyframes fade{from{opacity:0}to{opacity:1}}
